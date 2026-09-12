@@ -41,7 +41,7 @@ export async function onRequestGet(context) {
 
     const name = (
       /<title>\s*([^<|：:]+?)(?:基金费率|基金档案|_)?\s*[|_]/i.exec(html)
-        ?. [1] || `基金 ${code}`
+        ?.[1] || `基金 ${code}`
     ).trim();
 
     return Response.json({
